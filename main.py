@@ -26,7 +26,7 @@ from database import Database
 UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "")
 BOT_OWNER = int(os.environ["BOT_OWNER"])
 DATABASE_URL = os.environ["DATABASE_URL"]
-db = Database(DATABASE_URL)
+db = Database(DATABASE_URL,"Cluster0")
 
 Bot = Client(
     "Telegraph Uploader Bot",
