@@ -26,4 +26,5 @@ class Database:
         return all_users
 
     async def delete_user(self, user_id):
-        await self.col.delete_many({'id': int(user_id})
+        await self.col.delete_many({'id': int(user_id)})
+
