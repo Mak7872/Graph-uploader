@@ -1,5 +1,4 @@
-import motor
-
+import motor.motor_asyncio
 
 class Database:
     def __init__(self, url, database_name):
@@ -27,4 +26,4 @@ class Database:
         return all_users
 
     async def delete_user(self, user_id):
-        await self.col.delete_many({'id': int(user_id)})
+        await self.col.delete_many({'id': int(user_id})
