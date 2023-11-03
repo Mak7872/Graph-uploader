@@ -12,9 +12,7 @@ class Database:
     async def add_user(self, user_id):
         user = self.new_user(user_id)
         try:
-            async with self._client.start_session() as session:
-                async with session.start_transaction():
-                    await self.col.insert_one(user, session=session)
+            await self.col.insert_one(user)
         except Exception as e:
             print(f"Error adding user: {e}")
 
